@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ConsoleApplication
 {
@@ -56,6 +57,17 @@ namespace ConsoleApplication
             return (2.2);
         }
 
+        public static List<string> Names(){
+            string[] names = {"Todd", "Tiffany", "Charlie", "Geneva", "Sydney"};
+            List<string> names2 = new List<string>();
+            for(int i = 0; i < names.Length; i++){
+                if(names[i].Length > 5){
+                    names2.Add(names[i]);
+                }
+            }
+            return names2;
+        }
+
 
 
 
@@ -67,6 +79,7 @@ namespace ConsoleApplication
             // RandomArray();
             // coinFlip();
             // TossMultipleCoins(5);
+            // Names();
         }
     }
 }
