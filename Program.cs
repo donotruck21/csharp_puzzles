@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConsoleApplication
 {
@@ -11,7 +12,11 @@ namespace ConsoleApplication
                 // int rInt = r.Next(5, 25);
                 arr[i] = r.Next(5, 25);
             }
+            int minVal = arr.Min();
+            int maxVal = arr.Max();
             Console.WriteLine("[{0}]", string.Join(", ", arr));
+            Console.WriteLine(minVal);
+            Console.WriteLine(maxVal);
             return arr;
         }
 
