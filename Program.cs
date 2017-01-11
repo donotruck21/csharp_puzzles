@@ -5,11 +5,11 @@ namespace ConsoleApplication
 {
     public class Program
     {
+        //Random Array Challenege
         public static int[] RandomArray(){
             int[] arr = new int[10];
             Random r = new Random();
             for(int i = 0; i < arr.Length; i++){
-                // int rInt = r.Next(5, 25);
                 arr[i] = r.Next(5, 25);
             }
             int minVal = arr.Min();
@@ -21,13 +21,52 @@ namespace ConsoleApplication
         }
 
 
+        //Coin Flip Challenge
+        public static string coinFlip(){
+            string result = "";
+            // Console.WriteLine("Tossing a coin!");
+
+            Random r = new Random();
+            int flip = r.Next(2);
+
+            if(flip == 0){
+                Console.WriteLine("Heads");
+                result = "Heads";
+            } else {
+                Console.WriteLine("Tails");
+                result = "Tails";
+            }
+            return result;
+        }
+
+
+        public static double TossMultipleCoins(int num){
+            int heads = 0;
+            int tails = 0;
+            Random r = new Random();
+            for( int i = 0; i < 5; i++){
+                int flip = r.Next(2);
+                if(flip == 0){
+                    heads++;
+                } else {
+                    tails++;
+                }
+            }
+            Console.WriteLine(heads+":"+tails);
+            return (2.2);
+        }
+
+
+
 
 
 
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            RandomArray();
+            // RandomArray();
+            // coinFlip();
+            // TossMultipleCoins(5);
         }
     }
 }
